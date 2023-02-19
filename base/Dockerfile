@@ -24,7 +24,7 @@ ENV \
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install base system
-ARG BUILD_ARCH=amd64
+ARG BUILD_ARCH=aarch64
 ARG S6_OVERLAY_VERSION="3.1.3.0"
 RUN \
     apt-get update \
