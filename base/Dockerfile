@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ubuntu:focal-20221130
+ARG BUILD_FROM=ubuntu:jammy-20230126
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -30,11 +30,11 @@ RUN \
     apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        ca-certificates=20211016ubuntu0.20.04.1 \
-        curl=7.68.0-1ubuntu2.15 \
-        jq=1.6-1ubuntu0.20.04.1 \
-        tzdata=2022g-0ubuntu0.20.04.1 \
-        xz-utils=5.2.4-1ubuntu1.1 \
+        ca-certificates=20211016ubuntu0.22.04.1 \
+        curl=7.81.0-1ubuntu1.7 \
+        jq=1.6-2.1ubuntu3 \
+        tzdata=2022g-0ubuntu0.22.04.1 \
+        xz-utils=5.2.5-2ubuntu1 \
     \
     && S6_ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="i686"; \
@@ -96,7 +96,7 @@ ARG BUILD_REPOSITORY
 # Labels
 LABEL \
     io.hass.name="Addon Ubuntu base for ${BUILD_ARCH}" \
-    io.hass.description="Home Assistant Community Add-on: ${BUILD_ARCH} Ubuntu base image" \
+    io.hass.description="Home Assistant Community Add-on: ${BUILD_ARCH} Ubuntu jammy base image" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="base" \
     io.hass.version=${BUILD_VERSION} \

@@ -1,8 +1,8 @@
 ---
-name: Ubuntu Base Image
+name: Ubuntu jammy Base Image
 version: dev
 slug: ubuntu-base
-description: Docker Ubuntu base images used by Home Assistant Community Add-ons.
+description: Docker Ubuntu jammy base images used by Home Assistant Community Add-ons.
 url: https://github.com/hassio-addons/addon-ubuntu-base
 arch:
   - aarch64
